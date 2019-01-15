@@ -1,0 +1,145 @@
+body {
+	margin:0;
+	margin:0;
+	padding:0;
+	font-size:13px;
+	font-family:verdana;
+}
+.leftMenu {
+	width:200px;
+	position:absolute;
+	left:0;
+	top:0;
+	bottom:0;
+	background-color:#1CAEE5;
+}
+.leftMenu img {
+	margin-top:10px;
+}
+.caixa {
+	padding-left:200px;
+}
+.top {
+	height:70px;
+	background-color:#1CAEE5;
+	color:#FFF;
+	font-size:13px;
+}
+.topRight {
+	float:right;
+	height:40px;
+	line-height:10px;
+	padding-left:10px;
+	padding-top:15px;
+	padding-right:12px;
+}
+.topRight a {
+	color:#FFF;
+	text-decoration:none;
+}
+.menuArea {
+	padding-left:14px;
+	padding-top:30px;
+	color:#FFF;
+}
+.menuArea ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.menuArea li {
+	height:40px;
+	line-height:40px;
+	font-size:14px;
+	padding-left:40px;
+	background-size:14px 14px;
+	background-repeat:no-repeat;
+	background-position:10px 11px;
+}
+.menuArea li:hover {
+	background-color:#000;
+}
+.menuArea li a {
+	color:#FFF;
+	text-decoration:none;
+	display:block;
+}
+.menuArea li:nth-child(1) {
+	background-image:url('../images/accounts.png');
+}
+.menuArea li:nth-child(2) {
+	background-image:url('../images/download.png');
+}
+.menuArea li:nth-child(3) {
+	background-image:url('../images/upload.png');
+}
+.menuArea li:nth-child(4) {
+	background-image:url('../images/makefg.png');
+}
+.btnConta {
+	margin-left:90%;
+}
+.tabArea {
+	height:400px;
+}
+.tabArea h2 {
+	padding:0% 0% 2% 5%;
+	color:#909090;
+}
+.tabConta {
+	margin-left:5%;
+    border-collapse: collapse;
+    width: 90%;
+}
+.tabDespesa {
+	margin-left:5%;
+    border-collapse: collapse;
+    width: 90%;
+}
+th, td {
+    text-align: left;
+    padding: 12px;
+    color:#707070;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color:#1CAEE5;
+    color: white;
+}
+.form-conta {
+	width:70%;
+	height:400px;
+	position:absolute;
+	background-color:#FFF;
+	top:20%;
+	left:30%;
+	margin-left:-10px;
+}
+.form-conta span {
+	 color:#707070;
+	 font-weight:bold;
+	 position:absolute;
+	 padding-top:8px;
+}
+.form-conta input[type=text] {
+	width:80%;
+	height:30px;
+	font-size:17px;
+	border-radius:5px;
+	border:1px solid #CCC;
+	padding-bottom:10px;
+	outline:none;
+}
+.form-conta input[type=submit] {
+	width:100px;
+	height:40px;
+	border:0;
+	font-size:16px;
+	border-radius:5px;
+	background-color:#2CB0EB;
+	color:#FFF;
+	margin-top:20px;
+	cursor:pointer;
+}
