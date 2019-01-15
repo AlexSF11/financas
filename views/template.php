@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Dashboard - Mosave Personal Finance</title>
+	<title>Finanças Pessoais</title>
 	<link rel="icon" href="<?php echo URL; ?>/assets/images/logo-header.ico" type="image/x-icon" />
 	
 	<meta charset="utf-8" />

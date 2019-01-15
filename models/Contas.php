@@ -9,10 +9,9 @@ class Contas extends model {
 
 		if($sql->rowCount() == 0) {
 
-			$sql = $this->db->prepare("INSERT INTO contas SET id_usuario = :id_usuario, titulo = :titulo, tipo = :tipo, valor = :valor");
+			$sql = $this->db->prepare("INSERT INTO contas SET id_usuario = :id_usuario, titulo = :titulo, valor = :valor");
 			$sql->bindValue(":id_usuario", $_SESSION['fLogin']);
 			$sql->bindValue(":titulo", $titulo);
-			$sql->bindValue(":tipo", $tipo);
 			$sql->bindValue(":valor", $valor);
 			$sql->execute();
 			header("Location: ".URL);
@@ -22,11 +21,10 @@ class Contas extends model {
 	}
 
 	public function edit($id, $titulo, $valor, $tipo) {
-		$sql = $this->db->prepare("UPDATE contas SET titulo = :titulo, valor = :valor, tipo = :tipo WHERE id = :id");
+		$sql = $this->db->prepare("UPDATE contas SET titulo = :titulo, valor = :valor WHERE id = :id");
 		$sql->bindValue(":id", $id);
 		$sql->bindValue(":titulo", $titulo);
 		$sql->bindValue(":valor", $valor);
-		$sql->bindValue(":tipo", $tipo);
 		$sql->execute();
 	}
 

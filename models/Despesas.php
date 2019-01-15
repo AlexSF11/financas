@@ -53,7 +53,7 @@ class Despesas extends model {
 	public function getDespesas() {
 		$array = array();
 
-		$sql = $this->db->prepare("SELECT despesas.descricao, despesas.data, despesas.despesas_valor, contas.titulo FROM despesas INNER JOIN contas ON despesas.id_conta = contas.id WHERE despesas.id_usuario = :id_usuario");
+		$sql = $this->db->prepare("SELECT despesas.id, despesas.descricao, despesas.data, despesas.despesas_valor, contas.titulo FROM despesas INNER JOIN contas ON despesas.id_conta = contas.id WHERE despesas.id_usuario = :id_usuario");
 		$sql->bindValue(":id_usuario", $_SESSION['fLogin']);
 		$sql->execute();
 

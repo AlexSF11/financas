@@ -15,9 +15,6 @@
 
 		Saldo Inicial:<br/>
 		<input type="text" name="valor" value="<?php echo number_format($contas['valor'], 2, ',', '.'); ?>"  /><br/><br/>
-		
-		Tipo de Conta:<br/>
-		<input type="text" name="tipo" value="<?php echo $contas['tipo']; ?>" /><br/><br/>
 
 		<input type="submit" value="Salvar" />
 	</form>

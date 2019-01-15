@@ -15,9 +15,6 @@
 
 		<span>Saldo Inicial</span><br/><br/>
 		<input type="text" name="valor"  /><br/><br/>
-		
-		<span>Tipo de Conta</span><br/><br/>
-		<input type="text" name="tipo" /><br/><br/>
 
 		<input type="submit" value="Adicionar" />
 	</form>

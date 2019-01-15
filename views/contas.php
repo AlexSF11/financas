@@ -10,14 +10,12 @@
 				<tbody>
 					<tr>
 						<th>Nome</th>
-						<th>Tipo de Conta</th>
 						<th>Saldo Atual</th>
 						<th>Ações</th>
 					</tr>
 					<?php foreach($contas as $conta): ?>
 					<tr>
 						<td><?php echo $conta['titulo']; ?></td>
-						<td><?php echo $conta['tipo']; ?></td>
 						<td><?php echo 'R$ '.number_format($conta['valor'], 2, ',', '.'); ?></td>
 						<td>
 						<a href="<?php echo URL; ?>/contas/edit/<?php echo $conta['id']; ?>"><img width="20" src="<?php echo URL; ?>/assets/images/edit.png"></a>
