@@ -6,7 +6,7 @@
  <body>
 	<div class="tabArea">
 		<h2>Despesas</h2>
-			<table class="tabDespesa">
+			<table class="table">
 				<tbody>
 					<tr>
 						<th>Descrição</th>

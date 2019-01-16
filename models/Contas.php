@@ -68,21 +68,7 @@ class Contas extends model {
 		return $array;
 	}
 
-	public function getNome() {
-		$array = array();
-
-		$sql = $this->db->query("SELECT id, titulo FROM contas");
-		if($sql->rowCount() > 0) {
-			$array = $sql->fetchAll();
-		}
-
-		return $array;
-	}
-
 	public function getValor($despesas_conta) {
-	
-
-
 		$sql = $this->db->prepare("SELECT valor FROM contas WHERE id = :id");
 		$sql->bindValue(":id", $despesas_conta);
 		$sql->execute();
@@ -92,6 +78,17 @@ class Contas extends model {
 			return $sql['valor'];
 		} 
 
+	}
+
+	public function valorAtual($conta_atual) {
+		$sql = $this->db->prepare("SELECT valor FROM contas WHERE id = :id");
+		$sql->bindValue(":id", $conta_atual);
+		$sql->execute();
+
+		if($sql->rowCount() > 0) {
+			$sql = $sql->fetch();
+			return $sql['valor'];
+		}
 	}
 
 }

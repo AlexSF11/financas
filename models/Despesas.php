@@ -77,4 +77,15 @@ class Despesas extends model {
 
 		return $array;
 	}
+
+	public function contaId($id) {
+		$sql = $this->db->prepare("SELECT id_conta FROM despesas WHERE id = :id");
+		$sql->bindValue(":id", $id);
+		$sql->execute();
+
+		if($sql->rowCount() > 0) {
+			$sql = $sql->fetch();
+			return $sql['id_conta'];
+		}
+	}
 }

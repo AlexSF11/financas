@@ -21,7 +21,7 @@
 		<div class="menuArea">
 			<ul>
 				<li><a href="<?php echo URL; ?>/contas">Contas</a></li>
-				<!-- <li><a href="<?php echo URL; ?>/renda">Renda</a></li> -->
+				<li><a href="<?php echo URL; ?>/receitas">Receitas</a></li>
 				<li><a href="<?php echo URL; ?>/despesas">Despesas</a></li>
 				<li><a href="<?php echo URL; ?>/transferencias">Tranferências</a></li>
 			</ul>
