@@ -22,10 +22,7 @@ class despesasController extends controller {
 		$c = new Categorias();
 		$contas = new Contas();
 		$d = new Despesas();
-
-	
 		
-
 		if(isset($_POST['descricao']) && !empty($_POST['descricao'])) {
 			$descricao = addslashes($_POST['descricao']);
 			$despesas_valor = addslashes($_POST['despesas_valor']);

@@ -17,8 +17,9 @@
                     <th>Valor</th>
                     <th>Ações</th>
                 </tr>
+                <?php foreach($receitas as $receita): ?>
                 <tr>
-                    <td>Viagem</td>
+                    <td><?php echo $receita['descricao']; ?></td>
                     <td>Nunbank</td>
                     <td>13/01/2019</td>
                     <td>R$ 200,00</td>
@@ -28,8 +29,10 @@
                     <a href="<?php echo URL; ?>/despesas/delete/<?php //echo $despesa['id']; ?>" ><img width="20" src="<?php echo URL; ?>/assets/images/delete.png"></a>
                     </td>
                 </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
     </div>
+    <a class="btnConta" href="<?php echo URL; ?>/receitas/add/receitas_add"><img width="40" src="<?php echo URL; ?>/assets/images/add.png"></a>
 </body>
 </html>
