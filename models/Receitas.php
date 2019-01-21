@@ -15,7 +15,37 @@ class Receitas extends model {
 		$sql->execute();
 
 		return $array;
+    }
+
+    public function editReceitas($descricao, $valor, $categoria, $conta, $id) {
+		$sql = $this->db->prepare("UPDATE receitas SET descricao = :descricao, valor = :valor, cat_receitas = :cat_receitas, id_conta = :id_conta  WHERE id = :id");	
+		$sql->bindValue(":descricao", $descricao);
+		$sql->bindValue(":valor", $valor);
+		$sql->bindValue(":cat_receitas", $categoria);
+		$sql->bindValue(":id_conta", $conta);
+		$sql->bindValue(":id", $id);
+		$sql->execute();
+    }
+    
+    public function del($id) {
+		$sql = $this->db->prepare("DELETE FROM receitas WHERE id = :id");
+		$sql->bindValue(":id", $id);
+		$sql->execute();
 	}
+    
+    public function getInfo($id) {
+        $array = array();
+
+        $sql = $this->db->prepare("SELECT * FROM receitas WHERE id = :id");
+        $sql->bindValue(":id", $id);
+        $sql->execute();
+
+        if($sql->rowCount() > 0) {
+            $array = $sql->fetch();
+        }
+
+        return $array;
+    }
 
     public function getReceitas() {
         $array = array();
@@ -35,4 +65,15 @@ class Receitas extends model {
 
         return $array;
     }
+
+    public function contaId($id) {
+		$sql = $this->db->prepare("SELECT id_conta FROM receitas WHERE id = :id");
+		$sql->bindValue(":id", $id);
+		$sql->execute();
+
+		if($sql->rowCount() > 0) {
+			$sql = $sql->fetch();
+			return $sql['id_conta'];
+		}
+	}
 }

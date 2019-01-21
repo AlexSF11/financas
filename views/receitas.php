@@ -20,13 +20,13 @@
                 <?php foreach($receitas as $receita): ?>
                 <tr>
                     <td><?php echo $receita['descricao']; ?></td>
-                    <td>Nunbank</td>
-                    <td>13/01/2019</td>
-                    <td>R$ 200,00</td>
+                    <td><?php echo $receita['titulo']; ?></td>
+                    <td><?php echo date('d/m/Y', strtotime($receita['data'])); ?></td>
+                    <td><?php echo 'R$ '.number_format($receita['valor'], 2, ',', '.'); ?></td>
                     <td>
-                    <a href="<?php echo URL; ?>/despesas/edit/<?php //echo $despesa['id']; ?>"><img width="20" src="<?php echo URL; ?>/assets/images/edit.png"></a>
+                    <a href="<?php echo URL; ?>/receitas/edit/<?php echo $receita['id']; ?>"><img width="20" src="<?php echo URL; ?>/assets/images/edit.png"></a>
 
-                    <a href="<?php echo URL; ?>/despesas/delete/<?php //echo $despesa['id']; ?>" ><img width="20" src="<?php echo URL; ?>/assets/images/delete.png"></a>
+                    <a href="<?php echo URL; ?>/receitas/delete/<?php echo $receita['id']; ?>" ><img width="20" src="<?php echo URL; ?>/assets/images/delete.png"></a>
                     </td>
                 </tr>
                 <?php endforeach; ?>

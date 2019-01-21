@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+	<link rel="stylesheet" type="text/css" href="<?php echo URL; ?>/assets/css/contas.css">
 </head>
  <body>
 	<div class="tabArea">
@@ -27,6 +27,17 @@
 				</tbody>
 			</table>
 		</div>
-		<a class="btnConta" href="<?php echo URL; ?>/contas/add/abrirconta"><img width="40" src="<?php echo URL; ?>/assets/images/add.png"></a>
+
+		<div id="menu-conta">
+			<ul>
+				<li>
+					<a class="btnConta" href="<?php echo URL; ?>/contas/add/abrirconta">Criar Conta</a>
+				</li>
+				<li>
+					<a class="btnConta" href="<?php echo URL; ?>/contas/add/abrirconta">Cria Transferência</a>
+				</li>
+				<li></li>
+			</ul>
+		</div>
 </body>
 </html>

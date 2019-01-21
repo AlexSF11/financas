@@ -81,7 +81,7 @@ class despesasController extends controller {
 			//Puxando o valor antigo da conta
 			$valor = $contas->getValor($despesas_conta);
 
-			//Inserindo a nova despesa
+			//Atualizando Despesa
 			$d->editDespesas($descricao, $despesas_valor, $categoria, $despesas_conta, $id);
 
 			//Atualizando o valor da conta, depois de inserir uma nova despesa

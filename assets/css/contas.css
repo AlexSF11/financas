@@ -1,0 +1,32 @@
+#menu-conta ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#menu-conta li {
+    height: 40px;
+    line-height: 40px;
+    background-repeat: no-repeat;
+    font-size: 18px;
+    background-size: 30px;
+}
+
+#menu-conta li a {
+    text-decoration: none;
+    color: #1CAEE5;
+}
+
+#menu-conta li span {
+    display: inline;
+}
+
+#menu-conta li:nth-child(1) {
+    background-image:url('../images/add.png');
+    background-position: 800px center;
+}
+
+.menu-conta li:nth-child(2) {
+    background-image:url('../images/makefg.png');
+    background-position: 800px center;
+}
